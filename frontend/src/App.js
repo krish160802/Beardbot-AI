@@ -42,7 +42,7 @@ function App() {
 
     try {
       setProcessing(true);
-      const res = await fetch(`http://localhost:5000/chat`, {
+      const res = await fetch(`/chat`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
