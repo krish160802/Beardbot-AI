@@ -80,5 +80,5 @@ if(process.env.NODE_ENV==='production'){
 
 
 
-app.listen(5000, ()=>console.log("Server is up"));
+app.listen(port, ()=>console.log("Server is up"));
 

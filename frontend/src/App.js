@@ -66,6 +66,7 @@ function App() {
       ]);
 
     } catch (error) {
+      console.log(error);
       const err = "Error ! Try again after some time"
 
       setMessages((prev) => [
@@ -93,7 +94,7 @@ function App() {
           <div className={styles.image}>
             <img src={beardman} alt="img"/>
           </div>
-          <p>AI-CHATBOT</p>
+          <marquee scrolldelay="180"><p>BEARD-O-BOT</p></marquee>
         </div>
       </div>
 
