@@ -9,7 +9,7 @@ const Background = () => {
 
     let interval = setInterval(()=>{
       t++;
-      if(t==5){
+      if(t==6){
         clearInterval(interval);
         setLoader(false);
       }

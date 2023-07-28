@@ -4,11 +4,6 @@
   padding: 0;
 }
 
-body{
-  padding: 30px;
-  background-color: rgba(1, 48, 45, 0.788);
-}
-
 .app{
   height: calc(100vh - 60px);
   width: 100%;
@@ -173,9 +168,15 @@ body{
   flex: 1;
   border: 1px solid gray;
   outline: none;
-  /* border: none; */
   border-radius: 10px;
   background-color: transparent;
   padding: 8px 16px;
   color: white;
+  
+}
+
+
+.footer .btn .icon :hover{
+  color: aliceblue;
+  cursor: pointer
 }

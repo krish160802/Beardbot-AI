@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import {Helmet} from 'react-helmet';
 import styles from './App.module.css';
 import beardman from './beard-man.png'; 
 import { Send } from "react-feather";
@@ -89,6 +90,9 @@ function App() {
 
   return (
     <div className={styles.app}>
+      <Helmet>
+        <style>{'body { background: rgba(1, 48, 45, 0.788); padding: 30px; }'}</style>
+      </Helmet>
       <div className={styles.header}>
         <div className={styles.left}>
           <div className={styles.image}>
@@ -133,6 +137,7 @@ function App() {
 
       <div className={styles.footer}>
         <input 
+          className="inp"
           placeholder="How may I assist you"
           value={msgTxt}
           onChange={(e)=>setMsgTxt(e.target.value)}  

@@ -3,17 +3,14 @@ body {
     padding: 0;
     background: #020202;
     font-family: Arial;
-    /* display: flex; */
   }
   
   .loader {
     display: flex;
-    /* background-color: red; */
     justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
-    /* transform: translate(-50%, -50%); */
   }
   
   
@@ -22,7 +19,6 @@ body {
     margin: 0;
     padding: 0;
     flex: 1;
-    /* font-size: 5em; */
     font-size: 7.5vw;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0);
@@ -30,26 +26,26 @@ body {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX2OhxYvTkF_NaNf-1KoPFH3WnngGcem3G6MckE9Uw2wDaB30qaPPSlCBhkWMIa0-f8Gs&usqp=CAU');
     background-repeat: repeat-x;
     -webkit-background-clip: text;
-    animation: animate 10s linear infinite;
+    animation: animate 6s linear infinite;
   }
   
   @keyframes animate {
       0%{
-          background-position: left 50px top 100px;
+          background-position: left 20px top 100px;
       }
       20%{
-          background-position: left 100PX top -30px;
+          background-position: left 200PX top -25px;
       }
       40%{
-          background-position: left 500px top -30px;
+          background-position: left 400px top -25px;
       }
       60%{
-          background-position: left 900px top -30px;
+          background-position: left 600px top -25px;
       }
       80%{
-          background-position: left 1300px top -30px;
+          background-position: left 800px top -25px;
       }
       100%{
-          background-position: left 1700px top 100px;
+          background-position: left 1000px top 100px;
       }
   }
