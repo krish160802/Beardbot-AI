@@ -1,12 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {Helmet} from 'react-helmet';
 import styles from './App.module.css';
 import beardman from './beard-man.png'; 
-import { Send } from "react-feather";
+import { Mic, Send } from "react-feather";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 function App() {
 
+  
+
   const lastMsg = useRef();
+
 
   const [msgTxt, setMsgTxt] = useState("");
   const [messages, setMessages] = useState([
@@ -17,6 +21,16 @@ function App() {
   ]);
   const [processing, setProcessing] = useState(false);
 
+  const {
+    transcript,
+    listening,
+  } = useSpeechRecognition();
+
+  
+  useEffect(()=>{
+    setMsgTxt(transcript);
+  },[transcript])
+  
   const submit = async () =>{
 
 
@@ -86,6 +100,7 @@ function App() {
 
     }
 
+
   };
 
   return (
@@ -136,16 +151,26 @@ function App() {
       </div>
 
       <div className={styles.footer}>
+      {/* {listening ? <Helmet>
+        <style>{' { background: "pink"); }'}</style>
+      </Helmet>:""} */}
         <input 
           className="inp"
           placeholder="How may I assist you"
           value={msgTxt}
+          
           onChange={(e)=>setMsgTxt(e.target.value)}  
         />
 
         <div className={styles.btn} onClick={submit}>
           <div className={styles.icon}>
             <Send/>
+          </div>
+        </div>
+
+        <div className={styles.btn} onClick={SpeechRecognition.startListening}>
+          <div className={styles.icon}>
+            <Mic/>
           </div>
         </div>
 
